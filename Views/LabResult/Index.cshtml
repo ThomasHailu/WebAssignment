@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Hospital_Management_System.Models.Laboratory.LabResult>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" >Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegisterPatientId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicalCase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TestNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BloodWork)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stool)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SignedBy)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegisterPatientId)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicalCase)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BloodWork)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stool)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SignedBy)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

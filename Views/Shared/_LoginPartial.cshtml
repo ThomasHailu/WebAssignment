@@ -1,0 +1,28 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<Hospital_Management_System.Models.ApplicationUser> signInManager
+@if (signInManager.IsSignedIn(User))
+{
+    <form method="post" id="Homepage" asp-action="Index" asp-controller="@ViewBag.R">
+        <ul class="nav navbar-nav">
+            <li class="text-white nav-link">HomePage </li>
+            <li><input type="submit" value="Homepage" class="text-white nav-link" /></li>
+        </ul>
+    </form>
+
+    <form method="post" id="logoutForm" asp-action="Logoff" asp-controller="Account">
+        <ul class="nav navbar-nav">
+            <li class="text-white nav-link">Hello, @User.Identity.Name! </li>
+            <li><input type="submit" value="Log off" class="text-white nav-link" /></li>
+        </ul>
+    </form>
+}
+else
+{
+    <ul class="nav navbar-nav">
+        <li>
+            <a class="nav-link text-white" id="loginLink" asp-controller="Account" asp-action="Index">Sign In</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" id="registerLink" asp-controller="HR" asp-action="RegisterEmployee">Register</a>
+        </li>
+    </ul>
+}

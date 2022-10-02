@@ -1,0 +1,68 @@
+﻿@model Hospital_Management_System.Models.Reception.ManageRoom
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ManageRoom</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RoomType)
+        </dt>
+
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RoomType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RoomNumber)
+        </dt>
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.RoomNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RegisterPatientId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RegisterPatientId)
+        </dd>
+        
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+
+
+
+
+@*<table class="table">
+    <tr>
+        <th>Room ID</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>Room Number</th>
+        <td>@Model.RoomNumber</td>
+    </tr>
+    <tr>
+        <th>PatientID</th>
+        <td>@Model.RegisterPatientId</td>
+    </tr>
+    <tr>
+        <th>Room Type</th>
+        <td>@Model.RoomType</td>
+    </tr>
+    <tr>
+       
+    </tr>
+</table>
+
+<a href="/manageroom/index" class="btn btn-info">Back to home Page</a>*@

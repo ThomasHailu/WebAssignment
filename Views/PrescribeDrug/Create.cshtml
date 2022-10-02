@@ -1,0 +1,81 @@
+﻿@model Hospital_Management_System.Models.Doctor.PrescribeDrug
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>PrescribeDrug</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegisterPatientId" class="control-label"></label>
+                <input asp-for="RegisterPatientId" class="form-control" />
+                <span asp-validation-for="RegisterPatientId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MedicalCase" class="control-label"></label>
+                <input asp-for="MedicalCase" class="form-control" />
+                <span asp-validation-for="MedicalCase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Allergies" class="control-label"></label>
+                <input asp-for="Allergies" class="form-control" />
+                <span asp-validation-for="Allergies" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Disabilities" class="control-label"></label>
+                <input asp-for="Disabilities" class="form-control" />
+                <span asp-validation-for="Disabilities" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Drugs" class="control-label"></label>
+                <input asp-for="Drugs" class="form-control" />
+                <span asp-validation-for="Drugs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dossage" class="control-label"></label>
+                <input asp-for="Dossage" class="form-control" />
+                <span asp-validation-for="Dossage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unit" class="control-label"></label>
+                <input asp-for="Unit" class="form-control" />
+                <span asp-validation-for="Unit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DietsToFollow" class="control-label"></label>
+                <input asp-for="DietsToFollow" class="form-control" />
+                <span asp-validation-for="DietsToFollow" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SignedBy" class="control-label"></label>
+                <input asp-for="SignedBy" class="form-control" />
+                <span asp-validation-for="SignedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Reception DashBoard</h1>
+<div class="col-6 text-left">
+    <a class="btn btn-primary" asp-controller="ManageAppointment" asp-action="Index">Manage Appointment</a>
+</div>
+<div class="col-6 text-center">
+    <a class="btn btn-info" asp-controller="RegisterPatient" asp-action="Index">Register Patient</a>
+</div>
+<div class="col-6 text-right">
+    <a class="btn btn-success" asp-controller="ManageRoom" asp-action="Index">Manage Room</a>
+</div>
+

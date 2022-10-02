@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Hospital_Management_System.Models.Reception.ManageRoom>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegiterPatient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegiterPatient)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+          </tbody>
+</table>
+*@
+
+
+
+
+
+
+        <table class="table">
+            <tr>
+                <th> ID</th>
+                <th>Room Number</th>
+                <th>Patient Id</th>
+                <th>Room Type</th>
+                
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.RoomNumber</td>
+                    <td>@item.RegisterPatientId</td>
+                    <td>@item.RoomType</td>
+                  
+                    <td>
+                        <a href="/manageroom/details/@item.Id" class=" btn btn-outline-info"><i class="bi bi-eye"></i>Details</a>
+                    </td>
+                    <td>
+                        <a href="/manageroom/edit/@item.Id" class=" btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a>
+                    </td>
+                    
+                </tr>
+            }
+        </table>
+        <div style="position:fixed; right:25px; bottom:50px" class="text-white">
+            <a asp-action="Create" class="btn btn-success"><i class="bi bi-plus-circle"></i>   Add New</a>
+        </div>
+
+
+
+
+
+
+  

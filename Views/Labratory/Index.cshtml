@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Labratory DashBoard</h1>
+<div class="col-6 text-left">
+    <a class="btn btn-primary" asp-controller="RegisterPatient" asp-action="Index2">Show Medical Record</a>
+</div>
+<div class="col-6 text-right">
+    <a class="btn btn-success" asp-controller="LabResult" asp-action="Index" >Create Lab Result</a>
+</div>
+
